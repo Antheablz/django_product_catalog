@@ -13,11 +13,11 @@
 - Downloadand unzip file from GitHub
 - initialize a python virtual environment:
     ```
-    python3 -m venv /path/to/new/virtual/environment
+    python3 -m venv .venv
     ```
 - Activate virtual environment:
     ```
-    source <venv_name>/bin/activate
+    source .venv/bin/activate
     ```
 - Install requirements:
     ```
