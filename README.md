@@ -25,4 +25,11 @@
     ```
 
 #### Executing the program
+- Enter into the project folder: product_catalog:
+    ```
+    cd product_catalog
+    ```
 - Simply run the following in your command line or terminal:
+    ```
+    python3 manage.py runserver
+    ```
