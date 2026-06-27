@@ -8,28 +8,73 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>TESTING HERE</h1>
+    <div class="container">
 
-    <table>
-        <thead>
-            <tr>
-                <th scope="col">Baked Item!</th>
-                <th scope="col">Description</th>
-                <th scope="col">Category</th>
-            </tr>
-        </thead>
+        <div class="sidebar">
+            <!-- SEARCH -->
+            <h2>Search</h2>
+            <form method="GET">
+                <input type="text" name="search">
+                <button type="submit">APPLY SEARCH</button>
+            </form>
 
-        <tbody>
-            {% for product in products %}
-            <tr>
-                <td scope="row">{{product.name}}</td>
-                <td scope="row">{{product.description}}</td>
-                <td scope="row">{{product.category}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
+            <!-- CATEGORIES -->
+            <div class="categories-container">
+                <form method="GET">
+                    <div> Categories </div>
+                    {% for category in categories %}
+                        <div>
+                            <input type="checkbox" name="category" value="{{category.name}}">
+                            <label>{{category.name}}</label>
+                        </div>
+                    {% endfor %}
 
-    </table>
-    
+                    <button type="submit">APPLY FILTERS</button>
+                </form>
+            </div>
+
+
+            <!-- TAGS -->
+            <div class="tags-container">
+                <form method="GET">
+                    <div> Tags </div>
+                    {% for tag in tags %}
+                        <div>
+                            <input type="checkbox" name="tag" value="{{tag.name}}">
+                            <label>{{tag.name}}</label>
+                        </div>
+                    {% endfor %}
+
+                    <button type="submit">APPLY FILTERS</button>
+                </form>
+            </div>
+            
+        </div>
+        
+
+        <!-- MAIN PRODUCT TABLE -->
+        <div class="product-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Baked Item!</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Category</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                        <td scope="row">{{product.name}}</td>
+                        <td scope="row">{{product.description}}</td>
+                        <td scope="row">{{product.category}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+      </div>
 </body>
 </html>

@@ -1,15 +1,34 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     min-height: 100vh;
-    /* display: grid;
-    place-content: center; */
 }
 
-h1, p {
-    text-align: center;
+.container {
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.categories-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tags-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-table {
+    border: 1px solid black;
+    padding: 20px;
 }
