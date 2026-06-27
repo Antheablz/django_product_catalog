@@ -14,12 +14,12 @@
             <form method="GET">
 
                 <!-- SEARCH -->
-                <h2>Search</h2>
+                <h3>Search</h3>
                 <input type="text" name="search" value="{{selected_search|default:''}}">
 
                 <!-- CATEGORIES -->
                 <div class="categories-container">
-                    <div> Categories </div>
+                    <h3> Categories </h3>
                     {% for category in categories %}
                         <div>
                             <input type="checkbox" name="category" value="{{category.name}}" {% if category.name in selected_categories %} checked {% endif %}>
@@ -30,7 +30,7 @@
 
                 <!-- TAGS -->
                 <div class="tags-container">
-                    <div> Tags </div>
+                    <h3> Tags </h3>
                     {% for tag in tags %}
                         <div>
                             <input type="checkbox" name="tag" value="{{tag.name}}" {% if tag.name in selected_tags %} checked {% endif %}>
@@ -45,12 +45,16 @@
         </div>
 
         <!-- MAIN PRODUCT TABLE -->
-        <div class="product-table">
-            <table>
+        <div >
+            <table class="product-table">
                 <thead>
                     <tr>
-                        <th scope="col">Baked Item!</th>
-                        <th scope="col">Description</th>
+                        <th scope="col">
+                            <h3>Baked Item!</h3>
+                        </th>
+                        <th scope="col">
+                            <h3>Description</h3>
+                        </th>
                     </tr>
                 </thead>
 
