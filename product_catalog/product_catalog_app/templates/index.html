@@ -11,16 +11,16 @@
     <div class="container">
 
         <div class="sidebar">
-            <!-- SEARCH -->
-            <h2>Search</h2>
             <form method="GET">
-                <input type="text" name="search">
-                <button type="submit">APPLY SEARCH</button>
-            </form>
 
-            <!-- CATEGORIES -->
-            <div class="categories-container">
-                <form method="GET">
+                <!-- SEARCH -->
+                <h2>Search</h2>
+                <input type="text" name="search">
+                <button type="submit">Search</button>
+                
+
+                <!-- CATEGORIES -->
+                <div class="categories-container">
                     <div> Categories </div>
                     {% for category in categories %}
                         <div>
@@ -29,14 +29,12 @@
                         </div>
                     {% endfor %}
 
-                    <button type="submit">APPLY FILTERS</button>
-                </form>
-            </div>
+                    <!-- <button type="submit">Apply</button> -->
+                </div>
 
 
-            <!-- TAGS -->
-            <div class="tags-container">
-                <form method="GET">
+                <!-- TAGS -->
+                <div class="tags-container">
                     <div> Tags </div>
                     {% for tag in tags %}
                         <div>
@@ -44,13 +42,13 @@
                             <label>{{tag.name}}</label>
                         </div>
                     {% endfor %}
+                        <!-- <button type="submit">Apply</button> -->
+                </div>
 
-                    <button type="submit">APPLY FILTERS</button>
-                </form>
-            </div>
-            
+                <button type="submit">Apply</button>
+                <a href="{% url 'home' %}" class="reset-button">clear</a>
+            </form>
         </div>
-        
 
         <!-- MAIN PRODUCT TABLE -->
         <div class="product-table">

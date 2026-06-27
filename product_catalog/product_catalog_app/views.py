@@ -9,7 +9,10 @@ def home(request):
 
     search = request.GET.get("search")
     category = request.GET.get("category")
-    tag = request.GET.get("tag")
+    tag = request.GET.getlist("tag")
+
+    print("TESTING")
+    print(tag)
 
     if search:
         products = products.filter(description__icontains=search)
@@ -18,7 +21,7 @@ def home(request):
         products = products.filter(category__name=category)
 
     if tag:
-        products = products.filter(tags__name=tag)
+        products = products.filter(tags__name__in=tag)
 
     context = {
         "categories": categories,
