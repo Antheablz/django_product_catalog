@@ -8,17 +8,14 @@ def home(request):
     products = Product.objects.all()
 
     search = request.GET.get("search")
-    category = request.GET.get("category")
+    category = request.GET.getlist("category")
     tag = request.GET.getlist("tag")
-
-    print("TESTING")
-    print(tag)
 
     if search:
         products = products.filter(description__icontains=search)
 
     if category:
-        products = products.filter(category__name=category)
+        products = products.filter(category__name__in=category)
 
     if tag:
         products = products.filter(tags__name__in=tag)
