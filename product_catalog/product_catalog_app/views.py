@@ -5,6 +5,7 @@ from .models import Product
 # def home(request):
 #     return render(request, 'index.html')
 
-def home(request):
+def product_page(request):
     products = Product.objects.all()
+    
     return render(request, 'index.html', {'products': products})
