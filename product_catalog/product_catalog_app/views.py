@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Category, Tag, Product
+from django import forms
+
 
 # Create your views here.
 def home(request):
@@ -23,6 +25,9 @@ def home(request):
     context = {
         "categories": categories,
         "tags": tags,
-        "products": products
+        "products": products,
+        "selected_categories": category,
+        "selected_tags": tag,
+        "selected_search": search
     }
     return render(request, 'index.html', context)

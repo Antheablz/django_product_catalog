@@ -23,7 +23,7 @@
                     <div> Categories </div>
                     {% for category in categories %}
                         <div>
-                            <input type="checkbox" name="category" value="{{category.name}}">
+                            <input type="checkbox" name="category" value="{{category.name}}" {% if category.name in selected_categories %} checked {% endif %}>
                             <label>{{category.name}}</label>
                         </div>
                     {% endfor %}
@@ -34,7 +34,7 @@
                     <div> Tags </div>
                     {% for tag in tags %}
                         <div>
-                            <input type="checkbox" name="tag" value="{{tag.name}}">
+                            <input type="checkbox" name="tag" value="{{tag.name}}" {% if tag.name in selected_tags %} checked {% endif %}>
                             <label>{{tag.name}}</label>
                         </div>
                     {% endfor %}
