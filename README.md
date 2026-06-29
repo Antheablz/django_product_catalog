@@ -21,7 +21,7 @@ Remarcable Inc assignment demonstrating skills related to the job. This assignme
     ```
 - Install requirements:
     ```
-    python3 install -r requirements.txt
+    pip install -r requirements.txt
     ```
 
 #### Executing the program
