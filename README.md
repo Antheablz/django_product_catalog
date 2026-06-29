@@ -1,10 +1,7 @@
-# Password Manager
+# Product Catelog
 
 
 ## Description
-
-
-## Motivation
 
 
 ## Getting Started
