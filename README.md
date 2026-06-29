@@ -1,8 +1,8 @@
 # Product Catelog
-
+![example image](product_catelog_pic.png)
 
 ## Description
-
+Remarcable Inc assignment demonstrating skills related to the job. This assignment involved building a simple Django project that models products, categories, and tags. 
 
 ## Getting Started
 
@@ -22,7 +22,7 @@
     ```
 
 #### Executing the program
-- Enter into the project folder: product_catalog:
+- Enter into the project folder: product_catalog
     ```
     cd product_catalog
     ```
