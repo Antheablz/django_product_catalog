@@ -42,4 +42,5 @@ def home(request):
         "selected_tags": tag,
         "selected_search": search
     }
+
     return render(request, 'index.html', context)

@@ -6,6 +6,9 @@ Remarcable Inc assignment demonstrating skills related to the job. This assignme
 
 ## Getting Started
 
+#### Requirements
+- Python 3.11+
+
 #### Installation
 - Downloadand unzip file from GitHub
 - initialize a python virtual environment:
@@ -22,7 +25,7 @@ Remarcable Inc assignment demonstrating skills related to the job. This assignme
     ```
 
 #### Executing the program
-- Enter into the project folder: product_catalog
+- Enter into the project folder: \<repository root>/product_catalog
     ```
     cd product_catalog
     ```
@@ -30,3 +33,6 @@ Remarcable Inc assignment demonstrating skills related to the job. This assignme
     ```
     python3 manage.py runserver
     ```
+
+#### Notes
+- AI was used in some of this assignment. Given the categories and tags I wanted to use, I had AI generate some of the bakery items and descriptions. Additionally, AI was used to speed up the debugging process when my css stylesheet was not being applied correctly.
